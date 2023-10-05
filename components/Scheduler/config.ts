@@ -9,7 +9,7 @@ const oneYearFromNow = new Date();
 oneYearFromNow.setFullYear(new Date().getFullYear() + 1);
 
 const config: Config = {
-  start: oneYearAgo,
+  start: new Date(),
   end: oneYearFromNow,
 };
 

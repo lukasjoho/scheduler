@@ -17,7 +17,7 @@ const SchedulerHeader = ({ config }: SchedulerHeaderProps) => {
   const months = groupDatesByMonth(dates);
 
   return (
-    <div className="flex">
+    <div className="flex h-16 w-full">
       {months.map((month, idx) => (
         <div key={idx}>
           <div className="text-sm text-muted-foreground border-b h-8 flex items-center">

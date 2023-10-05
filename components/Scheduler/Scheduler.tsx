@@ -1,7 +1,6 @@
 import { getProjects } from "@/lib/actions";
 import React from "react";
 import SchedulerHeader from "./SchedulerHeader";
-import { Prisma, PrismaClient } from "@prisma/client";
 import { getSwimlanes, haveOverlap } from "./helpers";
 import Item from "./Item";
 import config from "./config";
@@ -16,7 +15,7 @@ const Scheduler = async () => {
         <SchedulerHeader config={config} />
         <div className="space-y-2 relative">
           {swimlanes.map((swimlane, idx) => (
-            <div className="relative h-12" key={idx}>
+            <div className="relative h-12 border-b" key={idx}>
               {swimlane.map((project) => (
                 <Item key={project.id} project={project} />
               ))}
