@@ -15,10 +15,10 @@ const Scheduler = async () => {
       <div className="border rounded-lg w-full min-h-[300px] overflow-scroll">
         <SchedulerHeader config={config} />
         <div className="space-y-2 relative">
-          {swimlanes.map((swimlane) => (
-            <div className="relative h-12">
+          {swimlanes.map((swimlane, idx) => (
+            <div className="relative h-12" key={idx}>
               {swimlane.map((project) => (
-                <Item project={project} />
+                <Item key={project.id} project={project} />
               ))}
             </div>
           ))}

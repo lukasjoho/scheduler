@@ -18,14 +18,15 @@ const SchedulerHeader = ({ config }: SchedulerHeaderProps) => {
 
   return (
     <div className="flex">
-      {months.map((month) => (
-        <div>
+      {months.map((month, idx) => (
+        <div key={idx}>
           <div className="text-sm text-muted-foreground border-b h-8 flex items-center">
             {getMonthName(month[0])}
           </div>
           <div className="flex border-b">
-            {month.map((date: any) => (
+            {month.map((date: any, idx) => (
               <div
+                key={idx}
                 className={cn(
                   "w-8 aspect-square grid place-items-center text-xs text-muted-foreground",
                   isToday(date) &&
